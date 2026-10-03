@@ -122,9 +122,19 @@ em { color:var(--accent); font-style:normal; }
 .value-description { display:flex; align-items:center; gap:15px; margin-top:35px; padding:18px; background:var(--cream); color:var(--muted); font-size:14px; line-height:1.5; }
 .value-description svg { flex:0 0 auto; width:17px; color:var(--accent); }
 .value-description p { margin:0; }
-.quote-section { display:grid; grid-template-columns:35% 65%; background:var(--cream); padding:clamp(80px,11vw,160px) clamp(20px,7vw,112px); }
-.quote-mark { color:var(--accent); font:italic 180px/0.6 Georgia,serif; }
-.quote-content { max-width:850px; }
+.quote-section { display:grid; grid-template-columns:minmax(300px,.72fr) minmax(0,1.28fr); gap:clamp(45px,8vw,125px); align-items:center; background:var(--cream); padding:clamp(80px,11vw,160px) clamp(20px,7vw,112px); }
+  .quote-collage { position:relative; min-height:390px; animation:collageFloat 7s ease-in-out infinite; }
+  .quote-collage img { position:absolute; display:block; object-fit:cover; box-shadow:0 20px 35px rgba(16,22,51,.14); }
+  .collage-main { inset:35px 22% 0 0; width:72%; height:82%; }
+  .collage-small { width:45%; height:42%; border:8px solid var(--cream); }
+  .collage-small-top { top:0; right:0; }
+  .collage-small-bottom { right:2%; bottom:0; }
+  .collage-stamp { position:absolute; left:52%; top:45%; display:grid; place-items:center; width:78px; height:78px; border:1px solid var(--accent); border-radius:50%; background:var(--cream); color:var(--ink); font:italic 25px/1 Georgia,serif; transform:rotate(-12deg); }
+  .collage-stamp small { font:9px Arial,sans-serif; text-transform:uppercase; letter-spacing:.16em; color:var(--accent); }
+  .quote-mark { color:var(--accent); font:italic 180px/0.6 Georgia,serif; }
+  .quote-kicker { display:flex; align-items:center; gap:18px; }
+  .quote-kicker-line { width:60px; height:1px; background:var(--accent); }
+  .quote-content { max-width:850px; }
 .quote-content blockquote { margin:50px 0 35px; font-size:clamp(32px,4.5vw,64px); line-height:1.02; letter-spacing:-.06em; }
 .quote-author { display:flex; flex-direction:column; gap:5px; font-size:12px; }
 .quote-author span { color:var(--muted); }
@@ -139,7 +149,16 @@ em { color:var(--accent); font-style:normal; }
 .contact-details a { display:grid; grid-template-columns:90px 1fr 18px; gap:20px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:15px; font-size:13px; }
 .contact-details span { color:var(--muted); text-transform:uppercase; letter-spacing:.12em; font-size:9px; }
 .contact-details svg { width:14px; }
-.contact-form { display:flex; flex-direction:column; gap:22px; }
+  .social-quick-links { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:18px; }
+  .social-quick-link { display:grid; grid-template-columns:38px 1fr 16px; align-items:center; gap:11px; min-height:70px; padding:12px 14px; border:1px solid var(--line); background:rgba(255,255,255,.42); transition:transform .25s, background .25s, border-color .25s; }
+  .social-quick-link:hover { transform:translateY(-4px); background:#fff; border-color:var(--accent); }
+  .social-icon { display:grid; place-items:center; width:32px; height:32px; border-radius:10px; color:#fff; font-size:23px; font-weight:700; line-height:1; }
+  .instagram .social-icon { background:linear-gradient(135deg,#5b2be0,#ed3c72 55%,#f5b335); }
+  .whatsapp .social-icon { background:#22c55e; }
+  .social-quick-link strong, .social-quick-link small { display:block; }
+  .social-quick-link strong { font-size:13px; }
+  .social-quick-link small { margin-top:4px; color:var(--muted); font-size:9px; }
+  .contact-form { display:flex; flex-direction:column; gap:22px; }
 .contact-form label { display:flex; flex-direction:column; gap:9px; color:var(--muted); text-transform:uppercase; letter-spacing:.12em; font-size:9px; }
 .contact-form input, .contact-form textarea { width:100%; border:0; border-bottom:1px solid #bcbab2; background:transparent; padding:12px 0; color:var(--ink); outline:0; resize:vertical; font-size:14px; letter-spacing:0; text-transform:none; }
 .contact-form input:focus, .contact-form textarea:focus { border-color:var(--ink); }
