@@ -122,19 +122,27 @@ em { color:var(--accent); font-style:normal; }
 .value-description { display:flex; align-items:center; gap:15px; margin-top:35px; padding:18px; background:var(--cream); color:var(--muted); font-size:14px; line-height:1.5; }
 .value-description svg { flex:0 0 auto; width:17px; color:var(--accent); }
 .value-description p { margin:0; }
-.quote-section { display:grid; grid-template-columns:minmax(300px,.72fr) minmax(0,1.28fr); gap:clamp(45px,8vw,125px); align-items:center; background:var(--cream); padding:clamp(80px,11vw,160px) clamp(20px,7vw,112px); }
-  .quote-collage { position:relative; min-height:390px; animation:collageFloat 7s ease-in-out infinite; }
-  .quote-collage img { position:absolute; display:block; object-fit:cover; box-shadow:0 20px 35px rgba(16,22,51,.14); }
-  .collage-main { inset:35px 22% 0 0; width:72%; height:82%; }
-  .collage-small { width:45%; height:42%; border:8px solid var(--cream); }
-  .collage-small-top { top:0; right:0; }
-  .collage-small-bottom { right:2%; bottom:0; }
-  .collage-stamp { position:absolute; left:52%; top:45%; display:grid; place-items:center; width:78px; height:78px; border:1px solid var(--accent); border-radius:50%; background:var(--cream); color:var(--ink); font:italic 25px/1 Georgia,serif; transform:rotate(-12deg); }
-  .collage-stamp small { font:9px Arial,sans-serif; text-transform:uppercase; letter-spacing:.16em; color:var(--accent); }
-  .quote-mark { color:var(--accent); font:italic 180px/0.6 Georgia,serif; }
-  .quote-kicker { display:flex; align-items:center; gap:18px; }
-  .quote-kicker-line { width:60px; height:1px; background:var(--accent); }
-  .quote-content { max-width:850px; }
+.quote-section { display:grid; grid-template-columns:minmax(340px,.9fr) minmax(0,1.1fr); gap:clamp(45px,7vw,105px); align-items:center; background:var(--cream); padding:clamp(80px,11vw,160px) clamp(20px,7vw,112px); }
+.quote-collage { position:relative; min-height:clamp(330px,34vw,500px); animation:collageFloat 7s ease-in-out infinite; }
+.quote-collage img { position:absolute; display:block; object-fit:cover; box-shadow:0 20px 35px rgba(16,22,51,.14); transition:transform .6s cubic-bezier(.2,.8,.2,1), filter .6s; filter:saturate(.78); }
+.quote-collage:hover img { filter:saturate(1); }
+.collage-main { inset:35px 22% 0 0; width:72%; height:82%; animation:collageMain 8s ease-in-out infinite; }
+.collage-small { width:45%; height:42%; border:8px solid var(--cream); }
+.collage-small-top { top:0; right:0; animation:collageTop 6s 0.4s ease-in-out infinite; }
+.collage-small-bottom { right:2%; bottom:0; animation:collageBottom 6.5s .8s ease-in-out infinite; }
+.quote-collage:hover .collage-main { transform:scale(1.035) rotate(-1deg); }
+.quote-collage:hover .collage-small-top { transform:translate(5px,-6px) rotate(3deg); }
+.quote-collage:hover .collage-small-bottom { transform:translate(4px,5px) rotate(-3deg); }
+.collage-stamp { position:absolute; left:52%; top:45%; display:grid; place-items:center; width:78px; height:78px; border:1px solid var(--accent); border-radius:50%; background:var(--cream); color:var(--ink); font:italic 25px/1 Georgia,serif; transform:rotate(-12deg); animation:stampSpin 10s ease-in-out infinite; }
+.collage-stamp small { font:9px Arial,sans-serif; text-transform:uppercase; letter-spacing:.16em; color:var(--accent); }
+.quote-kicker { display:flex; align-items:center; gap:18px; }
+.quote-kicker-line { width:60px; height:1px; background:var(--accent); }
+.quote-content { max-width:850px; }
+@keyframes collageFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
+@keyframes collageMain { 0%,100% { transform:rotate(-1deg); } 50% { transform:rotate(1deg) translateY(-5px); } }
+@keyframes collageTop { 0%,100% { transform:rotate(2deg) translate(0); } 50% { transform:rotate(4deg) translate(3px,-7px); } }
+@keyframes collageBottom { 0%,100% { transform:rotate(-2deg) translate(0); } 50% { transform:rotate(-4deg) translate(-4px,5px); } }
+@keyframes stampSpin { 0%,85%,100% { transform:rotate(-12deg) scale(1); } 92% { transform:rotate(-5deg) scale(1.08); } }
 .quote-content blockquote { margin:50px 0 35px; font-size:clamp(32px,4.5vw,64px); line-height:1.02; letter-spacing:-.06em; }
 .quote-author { display:flex; flex-direction:column; gap:5px; font-size:12px; }
 .quote-author span { color:var(--muted); }
@@ -203,5 +211,7 @@ em { color:var(--accent); font-style:normal; }
   .contact-image { height:220px; margin-bottom:55px; }
   .quote-image { min-height:190px; }
   .quote-image img { min-height:190px; }
+  .quote-collage { min-height:330px; }
+  .quote-section { gap:32px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
