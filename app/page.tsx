@@ -16,11 +16,11 @@ import {
 } from 'lucide-react'
 
 function InstagramLogo() {
-  return <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/instagram/mono.svg?v=official-3" alt="" aria-hidden="true" />
+  return <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/instagram/default.svg?v=official-color-4" alt="" aria-hidden="true" />
 }
 
 function WhatsAppLogo() {
-  return <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/whatsapp/mono.svg?v=official-3" alt="" aria-hidden="true" />
+  return <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/whatsapp/default.svg?v=official-color-4" alt="" aria-hidden="true" />
 }
 
 const services = [
