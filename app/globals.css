@@ -221,4 +221,43 @@ em { color:var(--accent); font-style:normal; }
   .quote-collage { min-height:330px; }
   .quote-section { gap:32px; }
 }
+@media (max-width: 520px) {
+  .site-header { height:72px; padding-inline:16px; }
+  .brand { gap:8px; }
+  .brand-mark { width:34px; height:34px; }
+  .brand strong { font-size:14px; }
+  .brand small { display:none; }
+  .mobile-nav { top:72px; }
+  .hero { min-height:680px; padding:0 20px 54px; }
+  .hero h1 { font-size:clamp(52px,16vw,72px); }
+  .hero-bottom { gap:28px; margin-top:55px; }
+  .hero-bottom p { font-size:13px; }
+  .hero-actions { align-items:flex-start; flex-direction:column; gap:18px; }
+  .section, .quote-section, .iso-section { padding-inline:20px; }
+  .section-label { gap:10px; font-size:9px; }
+  .intro-grid, .iso-heading, .values-grid, .contact-grid { gap:34px; }
+  .intro h2, .services h2, .values h2, .contact h2 { font-size:clamp(42px,13vw,58px); }
+  .mission-strip p { font-size:17px; }
+  .stats-grid { gap:0; }
+  .stat strong { font-size:52px; }
+  .stat span { font-size:8px; line-height:1.4; }
+  .services-heading { margin-bottom:35px; }
+  .service-row { grid-template-columns:30px minmax(0,1fr) 16px; gap:10px; padding:20px 0; }
+  .service-row strong { font-size:18px; }
+  .service-feature, .service-feature img { min-height:340px; }
+  .process-line { grid-template-columns:1fr; }
+  .process-step, .process-step:not(:first-child) { min-height:0; padding:18px 0; border-right:0; }
+  .process-step strong { margin-top:12px; }
+  .quote-section { padding-top:78px; padding-bottom:78px; }
+  .quote-collage { min-height:270px; }
+  .quote-content blockquote { margin:34px 0 28px; font-size:clamp(32px,10vw,44px); }
+  .social-quick-links { grid-template-columns:1fr; }
+  .social-quick-link { grid-template-columns:58px minmax(0,1fr) 16px; min-height:88px; }
+  .social-icon { width:54px; height:54px; }
+  .social-icon svg, .social-icon img, .whatsapp .social-icon img { width:42px; height:42px; }
+  .contact-details a { grid-template-columns:72px minmax(0,1fr) 16px; gap:10px; font-size:12px; }
+  .footer-top, .footer-bottom { grid-template-columns:1fr; display:grid; gap:28px; }
+  .footer-bottom { justify-content:initial; }
+}
+
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
