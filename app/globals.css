@@ -64,6 +64,13 @@ em { color:var(--accent); font-style:normal; }
 .mini-label { color:var(--accent); text-transform:uppercase; letter-spacing:.15em; font-size:10px; }
 .mission-note { border-left:1px solid var(--line); padding-left:25px; color:var(--muted); font-size:13px; line-height:1.5; }
 .mission-note svg { width:16px; margin-top:10px; }
+.intro-image { position:relative; margin-top:clamp(48px,8vw,110px); min-height:clamp(260px,42vw,600px); overflow:hidden; background:var(--ink); }
+.intro-image img { display:block; width:100%; height:100%; min-height:inherit; object-fit:cover; filter:saturate(.82) contrast(1.04); transition:transform .8s ease, filter .8s ease; }
+.intro-image:hover img { transform:scale(1.025); filter:saturate(1) contrast(1.04); }
+.intro-image:after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(16,22,51,.5),transparent 55%); pointer-events:none; }
+.intro-image span { position:absolute; z-index:1; left:clamp(20px,4vw,54px); bottom:clamp(20px,4vw,48px); color:#fff; font-size:clamp(22px,3vw,42px); line-height:.95; letter-spacing:-.06em; }
+.hero-image { background-image:linear-gradient(90deg,rgba(10,18,50,.94) 0%,rgba(18,29,69,.7) 46%,rgba(18,29,69,.2)),url('/images/gestion-integral-editorial.png'); background-position:center; }
+.hero-image:after { content:''; position:absolute; inset:0; background:linear-gradient(0deg,rgba(8,16,48,.38),transparent 42%); }
 .section-dark { background:var(--ink); color:#fff; }
 .stats { padding:clamp(70px,9vw,130px) clamp(20px,7vw,112px); }
 .stats-intro { display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:55px; border-bottom:1px solid rgba(255,255,255,.18); }

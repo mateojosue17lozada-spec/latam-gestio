@@ -101,7 +101,7 @@ export default function Page() {
       </header>
 
       <section className="hero" id="inicio">
-        <div className="hero-image" />
+        <div className="hero-image" role="img" aria-label="Equipo de profesionales colaborando en una sesión estratégica" />
         <div className="hero-grid" />
         <div className="hero-content">
           <div className="eyebrow"><span>01 — Gestión Integral Latam</span><span className="hero-location">Ecuador / Latam</span></div>
@@ -114,7 +114,7 @@ export default function Page() {
       <section className="intro section" id="nosotros">
         <div className="section-label"><span>02</span><span>Quiénes somos</span></div>
         <div className="intro-grid"><h2>Convertimos la gestión en una <em>ventaja competitiva.</em></h2><div className="intro-copy"><p className="lead">En <strong>Gestión Integral</strong>, creemos que la calidad, la eficiencia y el cumplimiento normativo son los pilares del éxito empresarial.</p><p>Somos una consultora especializada en levantamiento de procesos, implementación de normas ISO, auditorías y asesoría regulatoria. Ayudamos a las empresas a optimizar su gestión, garantizar la conformidad legal y fortalecer su competitividad.</p><a className="text-link" href="#contacto">Conocer más sobre nosotros <ArrowUpRight /></a></div></div>
-        <div className="mission-strip"><div><span className="mini-label">Nuestra misión</span><p>Brindamos soluciones estratégicas con un enfoque personalizado y práctico, asegurando resultados medibles y una cultura de mejora continua.</p></div><div className="mission-note">Desde Ecuador<br />para Latinoamérica <ArrowUpRight /></div></div>
+        <div className="mission-strip"><div><span className="mini-label">Nuestra misión</span><p>Brindamos soluciones estratégicas con un enfoque personalizado y práctico, asegurando resultados medibles y una cultura de mejora continua.</p></div><div className="mission-note">Desde Ecuador<br />para Latinoamérica <ArrowUpRight /></div></div><div className="intro-image"><img src="/images/gestion-integral-editorial.png" alt="Equipo de Gestión Integral revisando procesos y resultados" /><span>Personas, procesos<br />y propósito.</span></div>
       </section>
 
       <section className="stats section-dark"><div className="stats-intro"><span className="section-label light-label"><span>03</span><span>La diferencia en números</span></span><p>Experiencia que se convierte en resultados.</p></div><div className="stats-grid">{[['100+', 'Clientes satisfechos'], ['50+', 'Certificaciones ISO'], ['200+', 'Proyectos completados'], ['10+', 'Años de experiencia']].map(([number, label]) => <div className="stat" key={label}><strong>{number}</strong><span>{label}</span></div>)}</div></section>
