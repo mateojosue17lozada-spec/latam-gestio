@@ -16,11 +16,11 @@ import {
 } from 'lucide-react'
 
 function InstagramLogo() {
-  return <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><linearGradient id="instagram-gradient" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stopColor="#feda75" /><stop offset="0.35" stopColor="#fa7e1e" /><stop offset="0.65" stopColor="#d62976" /><stop offset="1" stopColor="#4f5bd5" /></linearGradient></defs><rect x="4" y="4" width="16" height="16" rx="4.5" fill="none" stroke="url(#instagram-gradient)" strokeWidth="2.2" /><circle cx="12" cy="12" r="4" fill="none" stroke="url(#instagram-gradient)" strokeWidth="2" /><circle cx="17.2" cy="6.8" r="1.2" fill="#d62976" /></svg>
+  return <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/instagram/default.svg" alt="" aria-hidden="true" />
 }
 
 function WhatsAppLogo() {
-  return <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" fill="#25D366" /><path d="M7.8 17.1 8.7 14.3a6.1 6.1 0 1 1 2.3 2.1l-3.2.7Z" fill="none" stroke="white" strokeWidth="1.45" strokeLinejoin="round" /><path d="M10.1 9.3c.2-.4.4-.4.7-.4h.3c.2 0 .4.1.5.4l.5 1.2c.1.2.1.4-.1.6l-.5.6c.5 1 1.2 1.7 2.2 2.1l.6-.5c.2-.2.4-.2.6-.1l1.1.5c.3.1.4.3.3.6-.1.5-.5 1-1 1.1-1 .2-2.7-.6-3.8-1.6-1-.9-1.8-2.3-1.9-3.4 0-.5.2-.9.5-1.1Z" fill="white" /></svg>
+  return <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/whatsapp/default.svg" alt="" aria-hidden="true" />
 }
 
 const services = [

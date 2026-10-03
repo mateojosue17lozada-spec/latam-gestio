@@ -165,11 +165,11 @@ em { color:var(--accent); font-style:normal; }
 .social-quick-link { display:grid; grid-template-columns:64px minmax(0,1fr) 24px; align-items:center; gap:16px; min-height:104px; padding:14px 0; border:0; border-bottom:1px solid rgba(16,22,51,.18); border-radius:0; background:transparent; color:var(--ink); overflow:visible; transition:transform .25s, border-color .25s; }
  .social-quick-link:hover { transform:translateX(5px); border-color:var(--accent); }
  .social-icon { display:grid; place-items:center; width:60px; height:60px; border-radius:0; color:var(--ink); background:transparent; flex:none; }
- .social-icon svg { width:44px; height:44px; stroke-width:2.2; overflow:visible; }
+ .social-icon svg, .social-icon img { width:44px; height:44px; display:block; object-fit:contain; overflow:visible; }
  .social-quick-link > svg { width:16px; height:16px; flex:none; justify-self:end; transition:transform .25s; }
  .social-quick-link:hover > svg { transform:translateX(3px); }
  .instagram .social-icon, .whatsapp .social-icon { background:transparent; }
- .whatsapp .social-icon svg { width:46px; height:46px; }
+ .whatsapp .social-icon svg, .whatsapp .social-icon img { width:46px; height:46px; }
   .social-quick-link strong, .social-quick-link small { display:block; }
   .social-quick-link strong { font-size:13px; }
   .social-quick-link small { margin-top:4px; color:var(--muted); font-size:9px; }
