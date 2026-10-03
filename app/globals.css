@@ -52,7 +52,8 @@ em { color:var(--accent); font-style:normal; }
 .section-label:after { content:''; width:42px; height:1px; background:var(--line); }
 .light-label { color:rgba(255,255,255,.55); }
 .light-label:after { background:rgba(255,255,255,.2); }
-.intro { background:var(--paper); }
+  .intro { background:var(--paper); border-top:1px solid rgba(16,22,51,.08); }
+
 .intro-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:12%; margin:80px 0 130px; align-items:end; }
 .intro h2, .services h2, .values h2, .contact h2 { max-width:800px; margin:0; font-size:clamp(46px,6.8vw,98px); line-height:.94; letter-spacing:-.065em; }
 .intro-copy { max-width:410px; color:var(--muted); font-size:15px; line-height:1.7; }
@@ -71,7 +72,10 @@ em { color:var(--accent); font-style:normal; }
 .intro-image span { position:absolute; z-index:1; left:clamp(20px,4vw,54px); bottom:clamp(20px,4vw,48px); color:#fff; font-size:clamp(22px,3vw,42px); line-height:.95; letter-spacing:-.06em; }
 .hero-image { background-image:linear-gradient(90deg,rgba(10,18,50,.94) 0%,rgba(18,29,69,.7) 46%,rgba(18,29,69,.2)),url('/images/gestion-integral-editorial.png'); background-position:center; }
 .hero-image:after { content:''; position:absolute; inset:0; background:linear-gradient(0deg,rgba(8,16,48,.38),transparent 42%); }
-.section-dark { background:var(--ink); color:#fff; }
+  .section-dark { background:var(--ink); color:#fff; border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08); }
+  .services { background:#f7f4ed; border-top:1px solid rgba(16,22,51,.1); }
+  .values { background:#ece8df; border-top:1px solid rgba(16,22,51,.1); }
+
 .stats { padding:clamp(70px,9vw,130px) clamp(20px,7vw,112px); }
 .stats-intro { display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:55px; border-bottom:1px solid rgba(255,255,255,.18); }
 .stats-intro p { margin:0; color:rgba(255,255,255,.65); font-size:15px; }
@@ -158,9 +162,10 @@ em { color:var(--accent); font-style:normal; }
 .contact-details span { color:var(--muted); text-transform:uppercase; letter-spacing:.12em; font-size:9px; }
 .contact-details svg { width:14px; }
   .social-quick-links { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:18px; }
-  .social-quick-link { display:grid; grid-template-columns:38px 1fr 16px; align-items:center; gap:11px; min-height:70px; padding:12px 14px; border:1px solid var(--line); background:rgba(255,255,255,.42); transition:transform .25s, background .25s, border-color .25s; }
-  .social-quick-link:hover { transform:translateY(-4px); background:#fff; border-color:var(--accent); }
-  .social-icon { display:grid; place-items:center; width:32px; height:32px; border-radius:10px; color:#fff; font-size:23px; font-weight:700; line-height:1; }
+  .social-quick-link { display:grid; grid-template-columns:38px 1fr 16px; align-items:center; gap:11px; min-height:70px; padding:12px 14px; border:1px solid rgba(16,22,51,.16); border-radius:3px; background:#f8f6f0; color:var(--ink); transition:transform .25s, background .25s, border-color .25s, box-shadow .25s; }
+  .social-quick-link:hover { transform:translateY(-4px); background:#fff; border-color:var(--accent); box-shadow:0 12px 24px rgba(16,22,51,.1); }
+  .social-icon { display:grid; place-items:center; width:32px; height:32px; border-radius:10px; color:#fff; }
+  .social-icon svg { width:18px; height:18px; stroke-width:2.2; }
   .instagram .social-icon { background:linear-gradient(135deg,#5b2be0,#ed3c72 55%,#f5b335); }
   .whatsapp .social-icon { background:#22c55e; }
   .social-quick-link strong, .social-quick-link small { display:block; }
